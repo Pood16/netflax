@@ -1,6 +1,7 @@
 import { useMovieContext } from "../contexts/MovieContext";
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Link } from "react-router-dom";
 
 export default function MovieCard({movie}){
     const {addToFavoriteList, removeFromFavoritesList, isFavorite } = useMovieContext()
@@ -12,6 +13,7 @@ export default function MovieCard({movie}){
         else addToFavoriteList(movie)
     }
     return (
+        <Link to={`/movie/${movie.id}`} className="block">
             <div className="bg-[#1C1F26] rounded-lg overflow-hidden shadow-lg mb-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20 max-w-xs border border-[#2D2F36]">
                 <div className="relative">
                     <img src={`https://images.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full object-cover h-64" />
@@ -27,5 +29,6 @@ export default function MovieCard({movie}){
                 </div>
                 <hr className="border-[#2D2F36] my-2"/>
             </div>
+        </Link>
     )
 }

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Reset default padding from #root */
+
 #root {
   padding: 0;
 }

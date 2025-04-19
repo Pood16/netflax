@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import { MovieProvider } from './contexts/MovieContext'
 import Favorites from './pages/Favorites'
 import Home from './pages/Home'
+import MovieDetail from './pages/MovieDetail'
 import {Routes, Route} from 'react-router-dom'
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/favorites" element={<Favorites />}/>
+            <Route path="/movie/:id" element={<MovieDetail />}/>
           </Routes>
         </main>
         <footer className="bg-[#0F1115] border-t border-[#2D2F36] text-gray-400 text-center py-6 mt-auto">
