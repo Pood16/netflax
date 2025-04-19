@@ -23,6 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# API keys and secrets
-src/services/api.js
+# API key
 .env
