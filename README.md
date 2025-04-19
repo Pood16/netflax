@@ -9,6 +9,7 @@ Netflax is a modern, responsive web application built with React that allows use
 - **Favorites System**: Add movies to your favorites list
 - **Responsive Design**: Fully responsive layout works on all device sizes
 - **Modern UI**: Contemporary design with indigo, emerald, and violet color scheme
+- **Movie Details**: View comprehensive information about each movie
 
 ## 🚀 Technology Stack
 
@@ -29,6 +30,13 @@ Netflax is a modern, responsive web application built with React that allows use
 - Shows movies that users have marked as favorites
 - Persists user selections using local storage
 - Provides feedback when no favorites are saved
+
+### Movie Detail Page
+- Displays comprehensive information about a selected movie
+- Shows movie poster, title, release date, and overview
+- Features cast information, videos, and images
+- Provides additional details like runtime, budget, and genres
+- Allows users to add/remove the movie from favorites
 
 ## 🔧 Components
 
