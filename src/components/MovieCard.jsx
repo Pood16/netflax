@@ -25,7 +25,6 @@ export default function MovieCard({movie}){
                     <h3 className="text-xl font-semibold text-emerald-300 mb-1 truncate">{movie.title}</h3>
                     <p className="text-violet-300 text-sm">{movie.release_date?.split('-')[0]}</p>
                 </div>
-                <hr className="border-indigo-700 my-2"/>
             </div>
     )
 }
