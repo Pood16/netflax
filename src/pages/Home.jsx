@@ -45,19 +45,19 @@ export default function Home(){
   }
 
     return (
-      <div className="container mx-auto px-4 py-8 bg-indigo-950 min-h-screen">
+      <div className="container mx-auto px-4 py-8 bg-[#0F1115] min-h-screen">
           <form onSubmit={handleSearch} className="mb-8">
-            <div className="border border-indigo-600 rounded-lg overflow-hidden flex shadow-lg max-w-2xl mx-auto">
+            <div className="border border-[#2D2F36] rounded-lg overflow-hidden flex shadow-lg max-w-2xl mx-auto">
                 <input 
                     type="search" 
-                    className="bg-indigo-900 text-white flex-1 p-4 outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="bg-[#1C1F26] text-gray-50 flex-1 p-4 outline-none focus:ring-2 focus:ring-indigo-500"
                     placeholder="Search for movies..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <button 
                   type="submit" 
-                  className="bg-emerald-600 text-white px-6 py-3 font-medium hover:bg-emerald-700 transition duration-300"
+                  className="bg-gradient-to-r from-indigo-500 to-emerald-500 text-gray-50 px-6 py-3 font-medium hover:from-indigo-600 hover:to-emerald-600 transition duration-300"
                 >
                   Search
                 </button>
@@ -71,7 +71,7 @@ export default function Home(){
             <Loading />
           </div> : (
             <div className="mt-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                   {movies.map(
                       movie => <MovieCard movie={movie} key={movie.id}/>
                   )}

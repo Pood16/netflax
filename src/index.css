@@ -5,8 +5,8 @@
   font-weight: 400;
 
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1e1b4b; /* indigo-950 */
+  color: #F9FAFB;
+  background-color: #0F1115;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #1e1b4b; /* indigo-950 */
+  background-color: #0F1115;
 }
 
 *, *::before, *::after {
@@ -32,14 +32,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #2e1065; /* violet-950 */
+  background: #1C1F26;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #10b981; /* emerald-500 */
+  background: #6366F1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #047857; /* emerald-700 */
+  background: #4F46E5;
 }

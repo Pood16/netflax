@@ -9,7 +9,7 @@ import {Routes, Route} from 'react-router-dom'
 export default function App() {
   return (
     <MovieProvider>
-      <div className="min-h-screen bg-indigo-950 flex flex-col">
+      <div className="min-h-screen bg-[#0F1115] flex flex-col">
         <NavBar />
         <main className="flex-grow">
           <Routes>
@@ -17,7 +17,7 @@ export default function App() {
             <Route path="/favorites" element={<Favorites />}/>
           </Routes>
         </main>
-        <footer className="bg-indigo-950 border-t border-indigo-800 text-violet-400 text-center py-6 mt-auto">
+        <footer className="bg-[#0F1115] border-t border-[#2D2F36] text-gray-400 text-center py-6 mt-auto">
           <p>&copy; {new Date().getFullYear()} Netflax - All rights reserved</p>
         </footer>
       </div>
