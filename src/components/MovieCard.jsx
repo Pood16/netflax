@@ -1,26 +1,30 @@
+import { useMovieContext } from "../contexts/MovieContext";
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 export default function MovieCard({movie}){
+    const {addToFavoriteList, removeFromFavoritesList, isFavorite } = useMovieContext()
+    const favorite = isFavorite(movie.id)
 
-    function handleFavorite(){
-        alert("added to favorit");
+    const handleFavorite = (e) => {
+        e.preventDefault()
+        if (favorite) removeFromFavoritesList(movie.id)
+        else addToFavoriteList(movie)
     }
     return (
-        <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg mb-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <div className="relative">
-                <img src={`https://images.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full object-cover" />
-                <div className="absolute top-2 right-2">
-                    <button 
-                        onClick={handleFavorite}
-                        className="bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 transition duration-300"
-                    >
-                        ❤️
-                    </button>
+            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg mb-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl max-w-xs">
+                <div className="relative">
+                    <img src={`https://images.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full object-cover h-64" />
+                    <div className="absolute top-2 right-2">
+                        <IconButton onClick={handleFavorite} aria-label="favorite">
+                            <FavoriteIcon sx={{ color: favorite ? 'red' : 'white' }} />
+                        </IconButton>
+                    </div>
                 </div>
+                <div className="p-4 h-24 overflow-hidden">
+                    <h3 className="text-xl font-semibold text-white mb-1 truncate">{movie.title}</h3>
+                    <p className="text-gray-400 text-sm">{movie.release_date?.split('-')[0]}</p>
+                </div>
+                <hr className="border-gray-700 my-2"/>
             </div>
-            <div className="p-4">
-                <h3 className="text-xl font-semibold text-white mb-1">{movie.title}</h3>
-                <p className="text-gray-400 text-sm">{movie.release_date?.split('-')[0]}</p>
-            </div>
-            <hr className="border-gray-700 my-2"/>
-        </div>
     )
 }
